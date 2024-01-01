@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/ResultGlobal.css" />
+  <link rel="stylesheet" href="/css/Resultcss.css" />
+  <link rel="stylesheet" href="/css/ResultGuide.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+   
+  .canvas-container {
+    max-width: 500px; /* 원하는 최대 너비 설정 */
+  margin-top: 1000px; /* 위쪽 여백 설정 */
+  margin-left: 150px;
+  }
+  .canvas {
+      width: 100%; /* 부모 요소의 너비에 맞춤 */
+      height: auto; /* 높이 자동 조정 */
+      display: block; /* 블록 요소로 표시 */
+  }
+</style>
+</head>
+
+<body>
+  <div class="frame">
+    <div class="div">
+      <img class="rectangle" src="img/rectangle-1118.png" />
+      <div class="overlap">
+        <div class="view"><img class="search" src="img/icons8-search-30-1.png" /></div>
+        <img class="img" src="img/rectangle-1117.png" />
+        <div class="overlap-group">
+          <img class="vector" src="img/vector-10.svg" />
+          <img class="element-removebg-preview" src="img/1-removebg-preview-2.png" />
+          <div class="text-wrapper">AI 로펌</div>
+          <div class="text-wrapper-2">사건 분석 결과 안내</div>
+          <p class="left-p">              
+          </p>            
+          <p class="right-p">              
+          </p>            
+            <!--  <div class="text-wrapper-22"></div>
+              <input type = "image" class="text-wrapper-3" src = "img/image-31@2x.png" onclick="redirectTolaw()">
+              <input type = "image" class="text-wrapper-20" src = "img/image-31@2x.png" onclick="redirectTolaw2()">               
+              <input type = "image" class="text-wrapper-21" src = "img/image-31@2x.png" onclick="redirectTolaw3()">
+            -->  
+          <img class="image" src="img/image-2.png" />
+          <p class="element"><span class="span">87</span> <span class="text-wrapper-18">%</span></p>
+        <div class="text-wrapper-19">예측 승률 : </div>
+          <div class="container">
+            
+           
+            </div>
+          </div>
+           <!--<img class="line" src="img/line-24.svg" />
+         <div class="view-2">
+            <div class="div-wrapper"><div class="text-wrapper-4">형량 예측</div></div>
+            <div class="overlap-group-2">
+              <img class="line-2" src="img/line-18-1.svg" />
+              <img class="line-3" src="img/line-19-1.svg" />
+              <div class="text-wrapper-5">징역 5년</div>
+              <div class="text-wrapper-6">징역 3년</div>
+              <div class="text-wrapper-7">선고 유예</div>
+              <div class="rectangle-2"></div>
+              <div class="rectangle-3"></div>
+              <div class="rectangle-4"></div>
+              <div class="text-wrapper-8">내사건</div>
+              <div class="text-wrapper-9">평균</div>
+              <div class="text-wrapper-10">최악</div>
+            </div>
+            
+            <img class="line-4" src="img/line-25.svg" />
+          </div>
+          <img class="line-5" src="img/line-23.svg" />
+          <div class="view-3">
+            <div class="overlap-2"><div class="text-wrapper-11">벌금</div></div>
+            <div class="overlap-3">
+              <div class="overlap-4">
+                <img class="line-6" src="img/line-18.svg" />
+                <img class="line-7" src="img/line-19.svg" />
+                <div class="rectangle-5"></div>
+                <div class="rectangle-6"></div>
+                <div class="rectangle-7"></div>
+                <div class="text-wrapper-12">내사건</div>
+                <div class="text-wrapper-13">평균</div>
+                <img class="line-8" src="img/line-22.svg" />
+              </div>
+              <div class="text-wrapper-14">최악</div>
+            </div>
+            <div class="text-wrapper-15">500만원</div>
+            <div class="text-wrapper-16">300만원</div>
+            <div class="text-wrapper-17">100만원</div>
+          </div>
+          <img class="line-9" src="img/line-21.svg" />-->
+          
+          <div class = canvas-container>
+          <canvas class="canvas" id="myChart" width="400" height="300"></canvas>
+        </div>
+          <img class="rectangle-8" src="img/rectangle-1094.png" />
+          <input type= "image" class="image-3" onclick="redirectTohomePage()" src="img/image.png" />            
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    fetch('http://127.0.0.1:5000/getData', {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+            })
+              .then(response => response.json())  // 응답을 JSON으로 파싱
+              .then(data => {
+                console.log(data)
+                const leftPEl = document.querySelector('.left-p');
+                const rightPEl = document.querySelector('.right-p');
+                const probabilitiesElement = document.querySelector('.span'); // 'probabilities' 클래스를 가진 요소를 선택
+
+                leftPEl.innerHTML = `
+                  사건 날짜: ${data['사건날짜']} <br/><br/>
+                  국선 상태: ${data['국선상태']} <br/><br/>
+                  교통 상황: ${data['교통상황']} <br/><br/>
+                  선택 사항: ${data['선택사항']} <br/><br/>
+                  사고 유무: ${data['사고유무']} <br/><br/>
+                `;
+                
+                rightPEl.innerHTML = `
+                  법원: ${data['법원']} <br/><br/>
+                  진행 방향: ${data['진행방향']} <br/><br/>
+                  방향 옵션: ${data['방향옵션']} <br/><br/>
+                  신호등 유무: ${data['신호등유무']} <br/><br/>
+                  장애 상태: ${data['장애상태']} <br/><br/>              
+                `;
+
+                const probabilityInPercentage = Math.floor(parseFloat(data['probabilities']) * 100); // 확률을 백분율로 변환
+                probabilitiesElement.innerHTML = `${probabilityInPercentage}`;
+    
+              })
+              .catch(error => {
+                console.error('Error:', error);
+              });
+              
+              document.addEventListener('DOMContentLoaded', function () {
+            // CSV 파일을 읽어오는 코드
+                  var xhr = new XMLHttpRequest();
+                  xhr.open('GET', '교통사고_요약_글자수.csv', true);
+                  xhr.onreadystatechange = function () {
+                      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                          var csvData = xhr.responseText;
+                          processData(csvData);
+                      }
+                  };
+                  xhr.send();
+              });
+
+              function processData(csvData) {
+                  var lines = csvData.split('\n');
+                  var dataCount = lines.length - 1; // 첫 번째 줄은 헤더
+
+                  // 이 부분에 학습 모델 실행 후 결과값을 가져오는 코드를 추가하세요.
+                  var modelResult = Array.from({length: 30}, () => Math.floor(Math.random() * 100))/*[ 학습 모델 결과 데이터 배열 ]*/;
+
+                  var ctx = document.getElementById('myChart').getContext('2d');
+                  var myChart = new Chart(ctx, {
+                      type: 'doughnut',
+                      data: {
+                          labels: ['전체 데이터 개수', '모델 결과 데이터 개수'],
+                          datasets: [{
+                              label: '데이터 개수',
+                              data: [dataCount, modelResult.length],
+                              backgroundColor: [
+                                  'rgba(255, 99, 132, 0.2)',
+                                  'rgba(54, 162, 235, 0.2)',
+                              ],
+                              borderColor: [
+                                  'rgba(255, 99, 132, 1)',
+                                  'rgba(54, 162, 235, 1)',
+                              ],
+                              borderWidth: 1
+                          }]
+                      },
+                      options: {
+                          scales: {
+                              y: {
+                                  beginAtZero: true,
+                                  ticks: {
+                                      stepSize: 1
+                                  }
+                              }
+                          }
+                      }
+                  });
+              }            
+        </script>
+</body>
+
+</html>

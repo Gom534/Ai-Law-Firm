@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="/css/index3.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+  <div class="div153">
+    <img src="img/1-removebg-preview-2.png" alt="로고" class="logo-image">
+    <b class="ai19">AI 로펌</b>
+    <div class="search-container">
+      <input type="text" placeholder="검색어를 입력하세요"
+        style="width: 1000px; height: 50px; border-radius: 30px; font-size: 28px; margin-right: -120px; margin-top: 10px;"
+        id="searchInput">
+      <form onsubmit="return search()" style="margin-top: 10px;">
+        <button type="submit" class="search-button">
+          <img src="img/search2.png" alt="검색" style="cursor:pointer;">
+        </button>
+      </form>
+      <a href="../Main.html" id="home"><img src="img/rectangle-1117.png" alt="홈으로" class="home-image"></a>
+    </div>
+    <hr class="dotted">
+  </div>
+  <div class="child34"></div>
+  <div class="rectangle-parent2">
+    <div class="group-child8">
+      <div class="section">
+        <h2 style="top:-10px; position:relative;">사건 정보</h2>
+      </div>
+      <div class="section">
+        <label for="incidentDate">
+          <h2 style="top: 10px; position: relative;">사건 발생일</h2>
+        </label>
+        <input type="date" id="incidentDate">
+        <!-- 달력 -->
+      </div>
+      <div class="section">
+        <h2>관할 법원</h2>
+        <input type="text" id="court" name="court" placeholder="법원명을 입력하세요">
+      </div>
+      <div class="section">
+        <h2 style="position: relative;">변호사</h2>
+        <label class="checkbox-label">
+          <input type="radio" name="lawyerType" value="국선"> 국선
+        </label>
+        <label class="checkbox-label">
+          <input type="radio" name="lawyerType" value="비국선"> 비국선
+        </label>
+      </div>
+      <button id="applyButton">사건 옵션 적용</button>
+      <hr class="dotted2">
+
+      <div class="group-child9">
+        <div class="section2">
+          <h2 style="top : -10px; left : -35px;font-size : 30px;white-space: nowrap; position: relative;">사고 정보</h2>
+        </div>
+        <div class="section2">
+          <h2 class>진행 방향</h2>
+          <!-- 진행 방향 옵션 -->
+          <label class="radio-label2">
+            <p id="차대차-label" name="option"><input type="radio" name="option1" id="차대차-label"
+                value="교차로(+자로 , T자로 등)사고">교차로(+자로 , T자로 등)사고</p>
+            <p id="차대인-label" name="option"><input type="radio" name="option1" id="차대인-label" value="횡단보도 내">횡단보도 내</p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option1" id="차대자전거-label"
+                value="교차로(+자로 , T자로 등)사고">교차로(+자로 , T자로 등)사고</p>
+          </label>
+          <label class="radio-label2">
+            <p id="차대차-label" name="option"><input type="radio" name="option1" id="차대차-label"
+                value="마주보는 방향 진행차량 상호 간의 사고">마주보는 방향 진행차량 간의 사고</p>
+
+            <p id="차대자전거-label" name="option"><input type="radio" name="option1" id="차대자전거-label"
+                value="마주보는 방향 진행차량 상호 간의 사고">마주보는 방향 진행차량 간의 사고</p>
+          </label>
+          <label class="radio-label2">
+            <p id="차대차-label" name="option"><input type="radio" name="option1" id="차대차-label"
+                value="같은 방향 진행차량 간의 사고">같은 방향 진행차량 간의 사고</p>
+            <p id="차대인-label" name="option"><input type="radio" name="option1" id="차대인-label" value="횡단보도 부근">횡단보도 부근
+            </p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option1" id="차대자전거-label"
+                value="같은 방향 진행차량 간의 사고">같은 방향 진행차량 간의 사고</p>
+
+          </label>
+          <label class="radio-label2">
+            <p id="차대차-label" name="option"><input type="radio" name="option1" id="차대차-label"
+                value="기타 사고(주차장, 회전교차로 등)">기타 사고(주차장, 회전교차로 등)</p>
+
+            <p id="차대자전거-label" name="option"><input type="radio" name="option1" id="차대자전거-label"
+                value="기타 사고(주차장, 회전교차로 등)">기타 사고(주차장, 회전교차로 등)</p>
+          </label>
+          <label class="radio-label2">
+            <p id="차대차-label" name="option"><input type="radio" name="option1" id="차대차-label"
+                value="자동차 대 이룬차 특수 유형">자동차 대 이룬차 특수 유형</p>
+            <p id="차대인-label" name="option"><input type="radio" name="option1" id="차대인-label" value="횡단보도 없음">횡단보도 없음
+            </p>
+          </label>
+          <label class="radio-label2">
+            <p id="차대인-label" name="option"><input type="radio" name="option1" id="차대인-label" value="기타 사고 유형">기타 사고 유형
+            </p>
+          </label>
+
+        </div>
+
+        <div class="section2">
+          <h2>교통 상황</h2>
+          <label class="radio-label3">
+            <p id="차대차-label" name="option"><input type="radio" name="option2" id="차대차-label" value="앞차량 주행중 후방충돌">앞차량 주행중 후방충돌</p>
+            <p id="차대인-label" name="option"><input type="radio" name="option2" id="차대인-label" value="자동차 녹색,황색, 적색 신호 교차로 통과후">자동차 녹색,황색, 적색 신호 교차로 통과후</p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option2" id="차대자전거-label" value="양쪽 신호등 있는 교차로">양쪽 신호등 있는 교차로</p>
+          </label>
+          <label class="radio-label3">
+            <p id="차대차-label" name="option"><input type="radio" name="option2" id="차대차-label" value="직진 대 직진 사고">직진 대 직진
+              사고</p>
+            <p id="차대인-label" name="option"><input type="radio" name="option2" id="차대인-label" value="자동차  교차로 통과전">자동차
+              교차로 통과전</p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option2" id="차대자전거-label" value="신호등 없는 교차로">신호등
+              없는 교차로</p>
+          </label>
+          <label class="radio-label3">
+            <p id="차대차-label" name="option"><input type="radio" name="option2" id="차대차-label" value="직진 대 우회전 사고">직진 대
+              우회전 사고</p>
+            <p id="차대인-label" name="option"><input type="radio" name="option2" id="차대인-label"
+                value="횡단보도 내(신호등 없음) 보행자 횡단">횡단보도 내(신호등 없음) 보행자 횡단</p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option2" id="차대자전거-label"
+                value="안전거리미확보로 인한 추돌사고">안전거리미확보로 인한 추돌사고</p>
+          </label>
+          <label class="radio-label3">
+            <p id="차대차-label" name="option"><input type="radio" name="option2" id="차대차-label"
+                value="신호등이 없는곳에서 직진 대 직진 사고">(신호등 없음) 직진 대 직진 사고</p>
+            <p id="차대인-label" name="option"><input type="radio" name="option2" id="차대인-label" value="보도와 차도">보도와 차도</p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option2" id="차대자전거-label" value="중앙선 침범 사고">중앙선
+              침범 사고</p>
+          </label>
+          <label class="radio-label3">
+            <p id="차대차-label" name="option"><input type="radio" name="option2" id="차대차-label"
+                value="신호등이 없는곳에서 직진 대 우회전 사고">(신호등 없음) 직진 대 우회전 사고</p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option2" id="차대자전거-label" value="진로 변경 사고">진로 변경
+              사고</p>
+          </label>
+          <label class="radio-label3">
+            <p id="차대자전거-label" name="option"><input type="radio" name="option2" id="차대자전거-label"
+                value="도로로 진입하는 차와 직진차의 사고">도로로 진입하는 차와 직진차의 사고</p>
+          </label>
+        </div>
+        <div class="section2">
+          <h2>방향 옵션</h2>
+          <label class="radio-label4">
+            <p id="차대차-label" name="option"><input type="radio" name="option3" id="차대차-label"
+                value="오른쪽 우회전 대 왼쪽 직진">오른쪽 우회전 대 왼쪽 직진</p>
+            <p id="차대인-label" name="option"><input type="radio" name="option3" id="차대인-label" value="추가 선택사항 없음">추가 선택사항
+              없음</p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option3" id="차대자전거-label"
+                value="역통행 자전거 대 정상통행 자동차">역통행 자전거 대 정상통행 자동차</p>
+          </label>
+          <label class="radio-label4">
+            <p id="차대차-label" name="option"><input type="radio" name="option3" id="차대차-label"
+                value="왼쪽 직진 교차로 내 진로변경 대 오른쪽 우회전">왼쪽 직진 진로변경 대 오른쪽 우회전</p>
+
+            <p id="차대자전거-label" name="option"><input type="radio" name="option3" id="차대자전거-label" value="직진 대 직진 사고">직진
+              대 직진 사고</p>
+          </label>
+          <label class="radio-label4">
+            <p id="차대차-label" name="option"><input type="radio" name="option3" id="차대차-label"
+                value="적색직진 대 녹색화살표 신호좌회전">적색직진 대 녹색화살표 신호좌회전</p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option3" id="차대자전거-label"
+                value="선행 진로변경 자전거 대 후행 직진 자동차">선행 진로변경 자전거 대 후행 직진 자동차</p>
+          </label>
+          <label class="radio-label4">
+            <p id="차대차-label" name="option"><input type="radio" name="option3" id="차대차-label"
+                value="녹색직진 대 녹색(적색)신호위반 자회전">녹색직진 대 녹색(적색)신호위반 자회전</p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option3" id="차대자전거-label"
+                value="후행 직진 자전거 대 선행 진로 변경 자동차">후행 직진 자전거 대 선행 진로 변경 자동차</p>
+          </label>
+        </div>
+      </div>
+      <hr class="dotted2">
+      <div class="group-child10">
+        <div class="section3">
+          <h2 style="left: -30px; position: relative;">추가 사항</h2>
+        </div>
+        <div class="section3">
+          <h2 class>선택 사항</h2>
+          <!-- 선택 사항 옵션 -->
+          <label class="radio-label5">
+            <p id="차대차-label" name="option"> <input type="radio" name="option4" id="차대차-label" value="차대차-속도 제한 구역">속도
+              제한 구역</p>
+            <p id="차대인-label" name="option"><input type="radio" name="option4" id="차대인-label" value="차대인- 속도 제한 구역">속도
+              제한 구역</p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option4" id="차대자전거-label"
+                value="차대자전거- 속도 제한 구역">속도 제한 구역</p>
+          </label>
+          <label class="radio-label5">
+            <p id="차대차-label" name="option"><input type="radio" name="option4" id="차대차-label" value="차대차-어린이 보호 구역">어린이
+              보호 구역</p>
+            <p id="차대인-label" name="option"><input type="radio" name="option4" id="차대인-label" value="차대인- 어린이 보호 구역">어린이
+              보호 구역</p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option4" id="차대자전거-label" value="차 대 자전거">어린이 보호
+              구역</p>
+          </label>
+        </div>
+
+        <div class="section3">
+          <h2>신호등 유무</h2>
+          <label class="radio-label6">
+            <p id="차대차-label" name="option"><input type="radio" name="option5" id="차대차-label" value="차대차-신호등 없음"> 신호등 없음
+            </p>
+            <p id="차대인-label" name="option"><input type="radio" name="option5" id="차대인-label" value="차대인-신호등 없음">신호등 없음
+            </p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option5" id="차대자전거-label"
+                value="차대자전거-신호등 없음">신호등 없음</p>
+          </label>
+        </div>
+      </div>
+      <hr class="dotted2">
+      <div class="group-child11">
+        <div class="section4">
+          <h2 style="left: -70px; position: relative;">기타 정보</h2>
+        </div>
+        <div class="section4">
+          <label class="radio-label7">
+            <p id="차대차-label" name="option">
+              <input type="radio" name="option6" id="차대차-label" name="option6" value="차대차-장애 있음">장애 있음
+            </p>
+            <p id="차대인-label" name="option"><input type="radio" name="option6" id="차대인-label" value="차대인-장애 있음">장애 있음
+            </p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option6" id="차대자전거-label" value="차대자전거-장애 있음">장애
+              있음</p>
+          </label>
+          <label class="radio-label7">
+            <p id="차대차-label" name="option"><input type="radio" name="option6" id="차대차-label" value="차대차-장애 없음">장애 없음
+            </p>
+            <p id="차대인-label" name="option"><input type="radio" name="option6" id="차대인-label" value="차대인-장애 없음">장애 없음
+            </p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option6" id="차대자전거-label" value="차대자전거-장애 없음">장애
+              없음</p>
+          </label>
+          <label class="radio-label7">
+            <p id="차대차-label">
+              <input type="radio" name="option7" id="차대차-label" value="차대차-사고 이력 있음">사고 이력 있음
+            </p>
+            <p id="차대인-label">
+              <input type="radio" name="option7" id="차대인-label" value="차대인-사고 이력 있음">사고 이력 있음
+            </p>
+            <p id="차대자전거-label">
+              <input type="radio" name="option7" id="차대자전거-label" value="차대자전거-사고 이력 있음">사고 이력 있음
+            </p>
+          </label>
+          <label class="radio-label7">
+            <p id="차대차-label" name="option"><input type="radio" name="option7" id="차대차-label" value="차대차-사고 이력 없음">사고 이력
+              없음</p>
+            <p id="차대인-label" name="option"><input type="radio" name="option7" id="차대인-label" value="차대인-사고 이력 없음">사고 이력
+              없음</p>
+            <p id="차대자전거-label" name="option"><input type="radio" name="option7" id="차대자전거-label" value="차대자전거-사고 이력 없음">사고 이력 없음</p>
+
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="parent17">
+    <div class="div160"></div>
+    <div class="div161"></div>
+  </div>
+  <div class="rectangle-parent3" style="display: flex;">
+    <div class="div181">사고종류</div>
+    <button class="div178 " onclick="goToAnalysis2()">차대차</button>
+    <button class="div179 " onclick="goToAnalysis3()">차대인</button>
+    <button class="div180 " onclick="goToAnalysis4()">차대자전거</button>
+    <!-- 차대인 및 차대자전거 버튼은 여기에 추가할 수 있음 -->
+  </div>
+
+  <button id="checkResultButton" class="centered-button-container" onclick="result()">결과보기</button>
+  <!-- <button id="checkResultButton1" type = "submit" onclick="getCheckboxValue()" >저장하기</button> -->
+
+  <script>
+    // 차대차 버튼 클릭 시 실행될 함수
+    function goToAnalysis2() {
+      showOptions("차대차-label");
+
+    }
+
+    // 차대인 버튼 클릭 시 실행될 함수
+    function goToAnalysis3() {
+      showOptions("차대인-label");
+
+    }
+
+    // 차대자전거 버튼 클릭 시 실행될 함수
+    function goToAnalysis4() {
+      showOptions("차대자전거-label");
+
+    }
+    var options = document.querySelectorAll('p[name="option"]');
+    // 모든 선택지를 숨김
+    for (var i = 0; i < options.length; i++) {
+      options[i].style.display = "none";
+    }
+
+    var typeOptions = document.querySelectorAll('p[id="차대차-label"]');
+    for (var i = 0; i < typeOptions.length; i++) {
+      typeOptions[i].style.display = "block";
+    }
+
+    // 선택지 옵션을 보여주거나 숨기는 함수
+    function showOptions(type) {
+      var options = document.querySelectorAll('p[name="option"]');
+      // 모든 선택지를 숨김
+      for (var i = 0; i < options.length; i++) {
+        options[i].style.display = "none";
+      }
+
+      var typeOptions = document.querySelectorAll('p[id="' + type + '"]');
+      for (var i = 0; i < typeOptions.length; i++) {
+        typeOptions[i].style.display = "block";
+      }
+    }
+
+    function result() {
+      const 사건날짜 = document.getElementById("incidentDate").value;
+      const 법원 = document.getElementById("court").value;
+      const 국선상태 = document.querySelector('input[name="lawyerType"]:checked').value;
+      const 진행방향 = document.querySelector('input[name="option1"]:checked').value;
+      const 교통상황 = document.querySelector('input[name="option2"]:checked').value;
+      const 방향옵션 = document.querySelector('input[name="option3"]:checked').value;
+      const 선택사항 = document.querySelector('input[name="option4"]:checked').value;
+      const 신호등유무 = document.querySelector('input[name="option5"]:checked').value;
+      const 사고유무 = document.querySelector('input[name="option7"]:checked').value;
+      const 장애상태 = document.querySelector('input[name="option6"]:checked').value;
+
+      const dataToSend = {
+        사건날짜,
+        법원,
+        국선상태,
+        진행방향,
+        교통상황,
+        방향옵션,
+        선택사항,
+        신호등유무,
+        사고유무,
+        장애상태,
+      };
+
+      fetch('http://127.0.0.1:5000/predict', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dataToSend),
+      })
+        .then(response => response.json())  // 응답을 JSON으로 파싱
+        .then(data => {
+          window.location.href = "/Result.html";
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+      }
+  </script>
+</body>
+
+
+</html>

@@ -1,0 +1,476 @@
+.ai19,
+.child34 {
+  position: absolute;
+  top: 15px;
+  left: 150px;
+  color: #222;
+  font-size: 50px;
+}
+
+
+.group-child8
+{
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(0.5% - 410px);
+  border-radius: 5px;
+  background-color: #eaeaea;
+  width: 1500px;
+  height: 1500px;
+  border-top: 1px solid #000;
+  font-size: 20px;
+}
+
+.div160,
+.div161,
+.parent14,
+.parent15,
+.parent16 {
+  position: absolute;
+  top: calc(50% - 152.5px);
+  left: calc(50% - 298px);
+  width: 600px;
+  height: 42px;
+}
+.div160,
+.div161,
+.parent15,
+.parent16 {
+  top: calc(50% - 38.5px);
+  left: calc(50% - 295px);
+}
+.div160,
+.div161,
+.parent16 {
+  top: calc(50% + 77.5px);
+  left: calc(50% - 296px);
+}
+
+.parent17 {
+  top: calc(50% + 254.5px);
+  left: calc(50% - 300px);
+  width: 600px;
+  height: 57px;
+}
+.div162,
+.i,
+.parent17 {
+  position: absolute;
+}
+.i {
+  top: calc(50% - 350.5px);
+  left: calc(50% - 152px);
+  font-size: 24px;
+}
+.div162 {
+  top: calc(50% - 186.5px);
+  left: calc(50% - 298px);
+}
+.div163,
+.div164,
+.div165 {
+  position: absolute;
+  top: calc(50% - 71.5px);
+  left: calc(50% - 295px);
+}
+.div164,
+.div165 {
+  top: calc(50% - 26.5px);
+  left: calc(50% - 283px);
+}
+.div165 {
+  top: calc(50% + 44.5px);
+  left: calc(50% - 291px);
+}
+.div166,
+.div167,
+.div168 {
+  position: absolute;
+  top: calc(50% + 88.5px);
+  left: calc(50% - 283px);
+}
+.div167,
+.div168 {
+  top: calc(50% - 141.5px);
+}
+.div168 {
+  top: calc(50% + 268.5px);
+  left: calc(50% - 23px);
+  font-size: 24px;
+  color: #fff;
+}
+.rectangle-parent2 {
+  position: absolute;
+  top: calc(50% - 357px);
+  left: calc(50% - 411px);
+  width: 820px;
+  height: 701px;
+  font-size: 16px;
+  color: #000;
+  font-family: Inter;
+}
+.child35,
+.div169 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 92px;
+}
+.child35 {
+  width: 100%;
+  left: 0;
+  background-color: #3f51b5;
+}
+.div169 {
+  width: calc(100% + 1px);
+  left: -1px;
+}
+.ai20,
+.b10 {
+  position: absolute;
+  height: 4.17%;
+  top: 93.61%;
+  left: calc(50% - 563.29px);
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  width: 186.85px;
+}
+.b10 {
+  left: calc(50% + 519.52px);
+  width: 254.38px;
+}
+.div153 {
+  
+  background-color: #fff;
+  
+  text-align: left;
+  font-size: 50px;
+  font-family: "Noto Sans KR";
+}
+.rectangle-parent3 {
+    display: flex;
+    align-items: center;
+    width:1300px;
+    position: relative;
+    left : 630px;
+    top : 20px;
+  } 
+  .div178,
+  .div179,
+  .div180 {
+    background-color: #ffffff; /* 초기 배경색 */
+    border: 2px solid #000;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 0 5px; /* 각 버튼 사이의 간격 조절 */
+    width: 500px; /* 버튼의 너비 */
+    height: 50px; /* 버튼의 높이 */
+    position : relative;
+    left : -200px;
+    font-weight: bold;
+  }
+
+  .div178:focus {
+    outline: none; /* 클릭 시 파란 테두리 제거 */
+  }
+
+  .div178.active {
+    background-color: #41A0E4 !important; /* 클릭 시 배경색 */
+    color: #ffffff !important; /* 클릭 시 글자색 */
+  }
+
+  .div181 {
+    font-size: 40px;
+    position : absolute;
+    left : -380px;
+    font-weight: bold;
+  } 
+/*로고css*/
+.logo-image {
+    position: absolute;
+    width: 100px;
+    height: 111px;
+    top: 15px;
+    left: 50px;
+    object-fit: cover;
+  }
+  /*home버튼 로고*/
+  .home-image {
+    width: 50px;
+    height: 50px;
+    position :relative;
+    right : -350px;
+    top: 8px;
+  }
+  /*검색칸 */
+  .search-container {
+    top: 15px;
+    
+    justify-content: center;
+    display: flex;
+    align-items: center;
+     /* 화면 높이를 기준으로 세로 중앙 정렬 */
+  }
+  
+  #searchInput {
+    border-radius: 100px;
+    width : 1200px;  /*검색 칸의 너비를 500px로 조절 */
+   
+  }  
+  
+  .search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 10px; /* 검색 칸과 검색 아이콘 간격 조절 */
+  }
+  
+  .search-button img {
+    width: 25%; /* 돋보기 아이콘의 크기 조정 */
+  }
+  /*차대차버튼색깔*/
+  .active {
+    background-color: #41A0E4 !important;
+    color: #ffffff !important;
+  }
+  hr.dotted {
+    border: none;
+    border-top: 2px dotted #000; /* 점선 스타일을 설정합니다. */
+    height: 1px; /* 수평선의 높이를 설정합니다. */
+    margin: 20px 0; /* 수평선 위 아래의 여백을 조절합니다. */
+  }
+
+/*사건정보 css*/
+.section {
+    display: inline-block;
+    margin: 0 55px; /* 각 섹션 간격 조절 */
+  }
+.section2 {
+    display: inline-grid;
+    margin : 0 40px;
+    
+  }
+.section3 {
+    display: inline-grid;
+    margin : 0 40px;
+  }
+  .section4 {
+    display: inline-grid;
+    margin : 0 20px;
+  }
+  
+  #incidentDate {
+    margin-top: 10px; /* 사건 발생일 입력 칸과의 간격 조절 */
+  }
+  
+  .checkbox-label {
+    display: inline-block; /* 체크박스 항목을 세로로 배치 */
+    position: relative;
+    top: 10px;
+    align-items: center;
+  }
+  /*날짜캘린더 크기*/
+  #incidentDate {
+    width: 250px; /* 사건 발생일 입력 칸의 너비를 조절합니다. */
+    height: 30px; /* 사건 발생일 입력 칸의 높이를 조절합니다. */
+    font-size: 18px; /* 사건 발생일 입력 칸의 폰트 크기를 조절합니다. */
+  }
+  /*관할 법원 크기 크기*/
+  #court {
+    width: 250px; 
+    height: 30px; 
+    font-size: 18px; 
+  }
+  /*국선, 비국선 체크박스 크기*/
+  .checkbox-label input[type="checkbox"] {
+    width: 20px; /* 체크박스의 너비를 조절합니다. */
+    height: 20px; /* 체크박스의 높이를 조절합니다. */
+    margin: 0 2px; /* 체크박스 간격을 조절합니다. */
+    background-color: #41A0E4 !important;
+    color: #ffffff !important;
+  }  
+  .checkbox-label span {
+    margin-top: -10px; /* 텍스트를 올리는 값 (조절해보세요) */
+  }
+  #applyButton {
+    position: absolute;
+    width: 209px;
+    height: 48px;
+    top: 154px;
+    left: 300px;
+    background-color: #606060b2;
+    border-radius: 2px;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  hr.dotted2 {
+    border: none;
+    border-top: 1px dotted #000; /* 점선 스타일을 설정합니다. */
+    height: 1px; /* 수평선의 높이를 설정합니다. */
+    margin: 20px 0; /* 수평선 위 아래의 여백을 조절합니다. */
+    position: relative;
+    top : 50px;
+  }
+  .checkbox-label2,
+  .checkbox-label3,
+  .checkbox-label4 {
+    display: inline-block; /* 체크박스 항목을 세로로 배치 */
+
+    position: relative;
+    top: -20px;
+    align-items: center;
+    margin-top: 0;
+  }
+.checkbox-label2,
+.checkbox-label3,
+.checkbox-label4 h2 {
+    margin-top: 15px;
+    font-size: 20px;
+}
+.group-child9 {
+    display: flex;
+    position: relative;
+    left: 50px;
+    top: 50px;
+}
+.group-child10 {
+  display: flex;
+  position: relative;
+  left: 45px;
+  top: 50px;
+}
+.group-child11 {
+  display: flex;
+  position: relative;
+  left: 45px;
+  top: 50px;
+  margin-left: 50px;
+}
+.checkbox-label7 {
+  margin-top: 0px;
+  font-size: 20px;
+  margin-left: px;
+}
+
+ /* 중앙 하단 배치를 위한 스타일 */
+ .centered-button-container {
+  text-align: center;
+  margin-top: 75%;
+  margin-left: 75%;
+}
+.centered-button-container1 {
+  text-align: center;
+  margin-top: 75%;
+  margin-left: 65%;
+}
+/* 버튼 스타일 */
+#checkResultButton {
+  background-color: #41A0E4; /* 버튼 배경색 */
+  color: white; /* 버튼 텍스트 색상 */
+  font-size: 20px; /* 버튼 텍스트 크기 */
+  border: none; /* 테두리 없음 */
+  border-radius: 5px; /* 둥근 테두리 */
+  padding: 10px 20px; /* 내부 여백 */
+  cursor: pointer; /* 커서 모양을 손가락으로 변경 */
+}
+
+/* 버튼 호버 효과 */
+#checkResultButton:hover {
+  background-color: #41A0E4; /* 호버시 배경색 변경 */
+}
+.group-child8 .content {
+  background-color: #ffffff; /* 하위 요소의 배경색을 흰색으로 설정 */
+  padding: 20px; /* 필요에 따라 내부 여백 조절 */
+}
+.radio-label2 input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.radio-label2 input[type="radio"]:checked {
+  background-color: #41A0E4;
+}
+.radio-label3 input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.radio-label3 input[type="radio"]:checked {
+  background-color: #41A0E4;
+}
+.radio-label4 input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.radio-label4 input[type="radio"]:checked {
+  background-color: #41A0E4;
+}
+.radio-label5 input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.radio-label5 input[type="radio"]:checked {
+  background-color: #41A0E4;
+}
+.radio-label6 input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.radio-label6 input[type="radio"]:checked {
+  background-color: #41A0E4;
+}
+.radio-label7 input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.radio-label7 input[type="radio"]:checked {
+  background-color: #41A0E4;
+}
