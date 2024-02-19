@@ -17,12 +17,6 @@
 콘솔을 통해 실행시켜주신뒤 메인페이지를 라이브서버로 여시면 실행이 가능합니다.
 
 
-저희가 계발예정했던 결과물 이미지 입니다. 
-![한이음결과물3](https://github.com/Gom534/Ai-Law-Firm/assets/155363678/4cea193a-4bc8-48a3-8f68-009d30932ad4)
-![한이음결과물2](https://github.com/Gom534/Ai-Law-Firm/assets/155363678/203d7c17-f4b2-49eb-8fdb-3773c4603d16)
-![한이음결과물1](https://github.com/Gom534/Ai-Law-Firm/assets/155363678/f3a2cb37-3b50-436a-98f6-adccacf4911b)
-
-
 ## 정보
 
 이정우  wjddntyvld@naver.com
